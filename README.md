@@ -34,7 +34,7 @@ It contains:
 
 ```bash
 # 0. clone + enter
-git clone https://github.com/lossfunk/esolang-metaprogramming.git
+git clone https://github.com/Lossfunk/esolang-metaprogramming.git
 cd esolang-metaprogramming
 
 # 1. environment (harness needs only Python 3.10+; one pkg for Shakespeare)
