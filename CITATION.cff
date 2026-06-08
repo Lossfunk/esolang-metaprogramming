@@ -1,0 +1,34 @@
+cff-version: 1.2.0
+message: "If you use this code or build on this work, please cite the paper."
+title: "Frontier Coding Agents Use Metaprogramming to Adapt to Unfamiliar Programming Languages"
+authors:
+  - family-names: Sharma
+    given-names: Aman
+  - family-names: Thorat
+    given-names: Sushrut
+  - family-names: Chopra
+    given-names: Paras
+year: 2026
+url: "https://lossfunk.com"
+repository-code: "https://github.com/lossfunk/esolang-metaprogramming"
+keywords:
+  - coding agents
+  - esoteric programming languages
+  - metaprogramming
+  - agentic evaluation
+  - out-of-distribution code generation
+  - EsoLang-Bench
+license: MIT
+preferred-citation:
+  type: conference-paper
+  title: "Frontier Coding Agents Use Metaprogramming to Adapt to Unfamiliar Programming Languages"
+  authors:
+    - family-names: Sharma
+      given-names: Aman
+    - family-names: Thorat
+      given-names: Sushrut
+    - family-names: Chopra
+      given-names: Paras
+  collection-title: "Advances in Neural Information Processing Systems (NeurIPS)"
+  year: 2026
+  notes: "Lossfunk"

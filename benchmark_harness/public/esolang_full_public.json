@@ -1,0 +1,503 @@
+{
+  "metadata": {
+    "name": "EsoLang-Bench",
+    "total_problems": 80,
+    "splits": {
+      "easy": 20,
+      "medium": 20,
+      "hard": 20,
+      "extra_hard": 20
+    },
+    "test_cases_per_problem": 6,
+    "languages": [
+      "Brainfuck",
+      "Befunge-98",
+      "Whitespace",
+      "Shakespeare"
+    ],
+    "source": "https://huggingface.co/datasets/Lossfunk/Esolang-Bench",
+    "paper": "arXiv:2603.09678"
+  },
+  "problems": [
+    {
+      "id": "E01",
+      "difficulty": "easy",
+      "title": "Print Hello World",
+      "description": "No input is provided. Write exactly the string 'Hello World!' to stdout with no extra whitespace before or after it."
+    },
+    {
+      "id": "E02",
+      "difficulty": "easy",
+      "title": "Echo Line",
+      "description": "Read a single line of text (which may be empty) and echo it back exactly as received, preserving every character including spaces and punctuation."
+    },
+    {
+      "id": "E03",
+      "difficulty": "easy",
+      "title": "Hello Name",
+      "description": "Read one line containing a name. Output 'Hello, NAME!' where NAME is the input text exactly as given (case-sensitive, no trimming)."
+    },
+    {
+      "id": "E04",
+      "difficulty": "easy",
+      "title": "Sum Two Integers",
+      "description": "Read two integers a and b separated by whitespace on one line. Output their sum a + b as a plain integer with no extra text."
+    },
+    {
+      "id": "E05",
+      "difficulty": "easy",
+      "title": "Multiply Two Integers",
+      "description": "Read two integers a and b separated by whitespace on one line. Output the product a * b as a plain integer."
+    },
+    {
+      "id": "E06",
+      "difficulty": "easy",
+      "title": "Even Or Odd",
+      "description": "Read a single integer n. If n is divisible by 2, output the word 'even'; otherwise output 'odd'."
+    },
+    {
+      "id": "E07",
+      "difficulty": "easy",
+      "title": "String Length",
+      "description": "Read an entire line of text (possibly containing spaces). Output the total number of characters in that line exactly as read, counting spaces and punctuation but excluding the trailing newline."
+    },
+    {
+      "id": "E08",
+      "difficulty": "easy",
+      "title": "Reverse String",
+      "description": "Read a line of text and output the characters in reverse order. The reverse must include every character exactly once with no additional spacing."
+    },
+    {
+      "id": "E09",
+      "difficulty": "easy",
+      "title": "Count Vowels",
+      "description": "Read a line of text and count how many characters are vowels from the set a, e, i, o, u in either uppercase or lowercase. Output the numeric count as an integer."
+    },
+    {
+      "id": "E10",
+      "difficulty": "easy",
+      "title": "Sum From 1 To N",
+      "description": "Read an integer N (which may be zero). Output the value of the arithmetic series 1 + 2 + ... + N. If N is zero, output 0. You may assume N is non-negative."
+    },
+    {
+      "id": "E11",
+      "difficulty": "easy",
+      "title": "Sum Of Digits",
+      "description": "Read a possibly negative integer n. Take its absolute value, sum all decimal digits, and output the resulting integer."
+    },
+    {
+      "id": "E12",
+      "difficulty": "easy",
+      "title": "Minimum Of Two",
+      "description": "Read two integers a and b separated by whitespace and output the smaller value. If a and b are equal, output that shared value once."
+    },
+    {
+      "id": "E13",
+      "difficulty": "easy",
+      "title": "Maximum Of Three",
+      "description": "Read three integers a, b, and c separated by spaces. Output the largest of the three values as an integer."
+    },
+    {
+      "id": "E14",
+      "difficulty": "easy",
+      "title": "Repeat String N Times",
+      "description": "Read an integer N on the first line and a string S on the second line. Output S repeated exactly N times with no separator or newline between repetitions."
+    },
+    {
+      "id": "E15",
+      "difficulty": "easy",
+      "title": "Concatenate Two Lines",
+      "description": "Read two entire lines S1 and S2. Output S1, followed by a single space character, followed by S2. Preserve both lines exactly as read."
+    },
+    {
+      "id": "E16",
+      "difficulty": "easy",
+      "title": "First And Last Character",
+      "description": "Read a non-empty string S on one line. Output the first character of S, a single space, then the last character of S."
+    },
+    {
+      "id": "E17",
+      "difficulty": "easy",
+      "title": "Uppercase String",
+      "description": "Read a line of text and output the same line but with every lowercase letter converted to uppercase. Leave uppercase letters, digits, punctuation, and spaces unchanged."
+    },
+    {
+      "id": "E18",
+      "difficulty": "easy",
+      "title": "Count Spaces",
+      "description": "Read a line of text and count how many literal space characters (' ') it contains. Output that count as an integer."
+    },
+    {
+      "id": "E19",
+      "difficulty": "easy",
+      "title": "Integer Average Of Two",
+      "description": "Read two integers a and b separated by whitespace. Compute the integer average (a + b) / 2 using truncating division toward zero and output the result."
+    },
+    {
+      "id": "E20",
+      "difficulty": "easy",
+      "title": "Compare Two Integers",
+      "description": "Read two integers a and b separated by whitespace. Output 'less' if a < b, 'greater' if a > b, or 'equal' if they are the same value."
+    },
+    {
+      "id": "M01",
+      "difficulty": "medium",
+      "title": "Palindrome Check",
+      "description": "Read a string S and determine whether it reads the same forwards and backwards, comparing characters exactly (case-sensitive and including punctuation). Output 'yes' for palindromes and 'no' otherwise."
+    },
+    {
+      "id": "M02",
+      "difficulty": "medium",
+      "title": "Word Count",
+      "description": "Read a line consisting of words separated by single spaces. Count how many words appear (non-empty sequences between spaces) and output that integer."
+    },
+    {
+      "id": "M03",
+      "difficulty": "medium",
+      "title": "Run Length Encoding",
+      "description": "Read a string S and produce its run-length encoding: for each maximal block of identical characters, output the character followed immediately by the length of the block as a decimal integer. Concatenate all blocks and output the resulting string."
+    },
+    {
+      "id": "M04",
+      "difficulty": "medium",
+      "title": "Caesar Shift By 3",
+      "description": "Read a lowercase alphabetic string S. Shift each letter forward by 3 positions in the English alphabet (wrapping z to c) and output the transformed string. Non-letter characters will not appear."
+    },
+    {
+      "id": "M05",
+      "difficulty": "medium",
+      "title": "Simple Binary Expression",
+      "description": "Read an expression formatted as 'a op b' with single spaces, where a and b are integers and op is one of '+', '-', or '*'. Evaluate the expression using integer arithmetic and output the result as an integer."
+    },
+    {
+      "id": "M06",
+      "difficulty": "medium",
+      "title": "Greatest Common Divisor",
+      "description": "Read two integers a and b separated by whitespace. Compute their greatest common divisor as a positive integer and output that value."
+    },
+    {
+      "id": "M07",
+      "difficulty": "medium",
+      "title": "Factorial",
+      "description": "Read an integer N with 0 \u2264 N \u2264 10. Compute N! (the factorial) using integer arithmetic and output the result."
+    },
+    {
+      "id": "M08",
+      "difficulty": "medium",
+      "title": "Nth Fibonacci Number",
+      "description": "Read an integer N \u2265 1 and output the Nth Fibonacci number using the 1-indexed sequence with F1 = 1 and F2 = 1. Use arbitrary-precision integers if needed."
+    },
+    {
+      "id": "M09",
+      "difficulty": "medium",
+      "title": "Decimal To Binary",
+      "description": "Read a non-negative integer N in decimal. Output its binary representation without leading zeros (except print '0' when N = 0)."
+    },
+    {
+      "id": "M10",
+      "difficulty": "medium",
+      "title": "Binary To Decimal",
+      "description": "Read a string consisting only of characters '0' and '1'. Interpret it as a binary number and output the corresponding decimal integer without extra text."
+    },
+    {
+      "id": "M11",
+      "difficulty": "medium",
+      "title": "Substring Occurrences",
+      "description": "Read a string S on the first line and a pattern P on the second line. Count how many times P appears in S, allowing overlapping matches, and output that integer count."
+    },
+    {
+      "id": "M12",
+      "difficulty": "medium",
+      "title": "Remove Vowels",
+      "description": "Read a line of text and remove every vowel character (a, e, i, o, u in both uppercase and lowercase). Output the filtered string preserving the order of the remaining characters."
+    },
+    {
+      "id": "M13",
+      "difficulty": "medium",
+      "title": "Sort Numbers",
+      "description": "Read an integer N on the first line followed by a second line containing N integers separated by spaces. Output the integers sorted in ascending order separated by single spaces."
+    },
+    {
+      "id": "M14",
+      "difficulty": "medium",
+      "title": "Second Largest Distinct Number",
+      "description": "Read an integer N \u2265 2 followed by N integers on the next line. Consider the distinct values and output the second largest distinct value. Inputs are guaranteed to contain at least two distinct numbers."
+    },
+    {
+      "id": "M15",
+      "difficulty": "medium",
+      "title": "Anagram Test",
+      "description": "Read two lowercase strings S1 and S2 (no spaces) on separate lines. Output 'yes' if S1 and S2 contain exactly the same characters with the same multiplicities (anagrams), otherwise output 'no'."
+    },
+    {
+      "id": "M16",
+      "difficulty": "medium",
+      "title": "Interleave Two Strings",
+      "description": "Read two strings S1 and S2 of equal length on separate lines. Construct a new string by alternating characters: S1[0], S2[0], S1[1], S2[1], ... until the end. Output the interleaved string."
+    },
+    {
+      "id": "M17",
+      "difficulty": "medium",
+      "title": "Replace Spaces With Underscores",
+      "description": "Read a line of text and output the same string but with every space character replaced by an underscore ('_'). All other characters stay unchanged."
+    },
+    {
+      "id": "M18",
+      "difficulty": "medium",
+      "title": "Sum Of List",
+      "description": "Read an integer N followed by a line of N integers separated by spaces. Sum the integers exactly and output the total."
+    },
+    {
+      "id": "M19",
+      "difficulty": "medium",
+      "title": "Characters At Even Indices",
+      "description": "Read a string S and output a new string consisting of the characters at even indices (0-based) from S in their original order."
+    },
+    {
+      "id": "M20",
+      "difficulty": "medium",
+      "title": "Count Distinct Characters",
+      "description": "Read a string S and output the number of distinct characters present in S. Treat uppercase and lowercase as different characters."
+    },
+    {
+      "id": "H01",
+      "difficulty": "hard",
+      "title": "Balanced Parentheses",
+      "description": "Read a string made only of '(' and ')' characters. Determine if the parentheses are balanced using the usual rules (every '(' closes in order, no prefix has more ')' than '('). Output 'yes' if balanced, otherwise 'no'."
+    },
+    {
+      "id": "H02",
+      "difficulty": "hard",
+      "title": "Evaluate Expression With Precedence",
+      "description": "Read a mathematical expression containing positive integers and the operators '+', '-', and '*' with no parentheses. Respect standard precedence (multiplication before addition/subtraction, evaluate left to right within the same precedence) and output the resulting integer."
+    },
+    {
+      "id": "H03",
+      "difficulty": "hard",
+      "title": "Count Primes Up To N",
+      "description": "Read an integer N \u2265 2. Count how many prime numbers are less than or equal to N and output that count as an integer."
+    },
+    {
+      "id": "H04",
+      "difficulty": "hard",
+      "title": "Nth Prime Number",
+      "description": "Read an integer K \u2265 1 and output the Kth prime number in the increasing sequence 2, 3, 5, 7, ... ."
+    },
+    {
+      "id": "H05",
+      "difficulty": "hard",
+      "title": "Big Integer Addition",
+      "description": "Read two non-negative integers A and B given as decimal strings on separate lines (they may be very large). Output the decimal representation of A + B with no leading zeros unless the result is zero."
+    },
+    {
+      "id": "H06",
+      "difficulty": "hard",
+      "title": "Longest Word",
+      "description": "Read a line containing words separated by single spaces. Identify the longest word and output it exactly as it appears. If multiple words tie for longest, output the first such word."
+    },
+    {
+      "id": "H07",
+      "difficulty": "hard",
+      "title": "Longest Common Prefix",
+      "description": "Read an integer N followed by N lines containing strings. Compute the longest common prefix shared by all strings (exact character comparison). Output the prefix, or an empty string if the strings share no common prefix."
+    },
+    {
+      "id": "H08",
+      "difficulty": "hard",
+      "title": "Digit Frequency",
+      "description": "Read a string consisting solely of digits 0-9. Count the frequency of each digit and output ten integers separated by single spaces representing counts for 0, 1, ..., 9 in that order."
+    },
+    {
+      "id": "H09",
+      "difficulty": "hard",
+      "title": "General Caesar Cipher",
+      "description": "Read an integer K (possibly negative) followed by a lowercase string S. Shift each character forward by K positions modulo 26 (wrapping around the alphabet) and output the resulting string."
+    },
+    {
+      "id": "H10",
+      "difficulty": "hard",
+      "title": "Remove Consecutive Duplicates",
+      "description": "Read a string S and remove consecutive duplicate characters so that each maximal run is replaced by a single occurrence. Output the compressed string."
+    },
+    {
+      "id": "H11",
+      "difficulty": "hard",
+      "title": "Run Length Decoding",
+      "description": "Read a run-length encoded string consisting of alternating characters and single-digit counts (1-9), e.g., 'a3b2'. Decode it by repeating each character count times and output the expanded string."
+    },
+    {
+      "id": "H12",
+      "difficulty": "hard",
+      "title": "ASCII Sum",
+      "description": "Read a string S and compute the sum of the ASCII/Unicode code points of all characters. Output the sum as an integer."
+    },
+    {
+      "id": "H13",
+      "difficulty": "hard",
+      "title": "Polynomial Evaluation",
+      "description": "Read an integer n, then a line containing n+1 integer coefficients for a degree-n polynomial starting with the highest-degree term, followed by an integer x on the next line. Evaluate the polynomial at x and output the integer result."
+    },
+    {
+      "id": "H14",
+      "difficulty": "hard",
+      "title": "List All Divisors",
+      "description": "Read a positive integer N and output all positive divisors of N in strictly increasing order separated by single spaces."
+    },
+    {
+      "id": "H15",
+      "difficulty": "hard",
+      "title": "Tape Walk Final Position",
+      "description": "Start with X = 0. Read a string consisting of the characters 'L' and 'R'. For each 'L' decrement X by 1; for each 'R' increment X by 1. After processing the entire string, output the final value of X as an integer."
+    },
+    {
+      "id": "H16",
+      "difficulty": "hard",
+      "title": "Longest Run Length",
+      "description": "Read a string S and compute the length (number of characters) of the longest contiguous block of identical characters. Output that length as an integer."
+    },
+    {
+      "id": "H17",
+      "difficulty": "hard",
+      "title": "Most Frequent Value",
+      "description": "Read an integer N followed by a line containing N integers. Determine which value appears most frequently. Output that value; if multiple values tie, output the smallest such value."
+    },
+    {
+      "id": "H18",
+      "difficulty": "hard",
+      "title": "Divisible By 3",
+      "description": "Read a non-negative integer represented as a string of digits. Decide whether the number is divisible by 3 using any method and output 'yes' if divisible, otherwise 'no'."
+    },
+    {
+      "id": "H19",
+      "difficulty": "hard",
+      "title": "Plus Minus Reset Machine",
+      "description": "Initialize X = 0. Read a string consisting of '+', '-', and '0'. For each '+', increment X; for '-', decrement X; for '0', reset X to 0. After processing all characters, output the final integer value of X."
+    },
+    {
+      "id": "H20",
+      "difficulty": "hard",
+      "title": "Sort Strings Lexicographically",
+      "description": "Read an integer N followed by N lines, each containing a string. Sort the strings lexicographically (dictionary order) using regular character comparison and output them in a single line separated by single spaces."
+    },
+    {
+      "id": "X01",
+      "difficulty": "extra_hard",
+      "title": "Prime Factorization",
+      "description": "Read a positive integer N > 1. Output its prime factorization as space-separated primes in ascending order with repetition. For example, 12 = 2*2*3, so output '2 2 3'."
+    },
+    {
+      "id": "X02",
+      "difficulty": "extra_hard",
+      "title": "Longest Increasing Subsequence Length",
+      "description": "Read an integer N followed by N integers. Find the length of the longest strictly increasing subsequence (not necessarily contiguous) and output that length."
+    },
+    {
+      "id": "X03",
+      "difficulty": "extra_hard",
+      "title": "Matrix Multiplication Result Element",
+      "description": "Read dimensions M, N, P, then an MxN matrix A (M lines, N integers each), then an NxP matrix B (N lines, P integers each), then row index i and column index j (0-based). Output the element at position (i,j) in the product matrix A*B."
+    },
+    {
+      "id": "X04",
+      "difficulty": "extra_hard",
+      "title": "Evaluate Postfix Expression",
+      "description": "Read a postfix (Reverse Polish Notation) expression with single-digit operands and operators +, -, *, / separated by spaces. Evaluate using integer arithmetic (truncate toward zero for division) and output the result."
+    },
+    {
+      "id": "X05",
+      "difficulty": "extra_hard",
+      "title": "Merge Two Sorted Arrays",
+      "description": "Read two lines, each containing space-separated integers in sorted ascending order. Merge them into a single sorted array and output the result as space-separated integers."
+    },
+    {
+      "id": "X06",
+      "difficulty": "extra_hard",
+      "title": "Compute Power Modulo",
+      "description": "Read three integers: base B, exponent E, and modulus M. Compute B^E mod M using efficient modular exponentiation and output the result. Assume E >= 0 and M > 0."
+    },
+    {
+      "id": "X07",
+      "difficulty": "extra_hard",
+      "title": "Longest Palindromic Substring Length",
+      "description": "Read a string S. Find the longest contiguous substring that is a palindrome and output its length."
+    },
+    {
+      "id": "X08",
+      "difficulty": "extra_hard",
+      "title": "Count Set Bits In Range",
+      "description": "Read two integers L and R (0 <= L <= R). Count the total number of 1-bits in the binary representations of all integers from L to R inclusive, and output that count."
+    },
+    {
+      "id": "X09",
+      "difficulty": "extra_hard",
+      "title": "Bracket Depth Maximum",
+      "description": "Read a string consisting only of '(' and ')' characters. The string may or may not be balanced. Output the maximum nesting depth achieved at any point while reading left to right (0 if empty or all closing brackets come first)."
+    },
+    {
+      "id": "X10",
+      "difficulty": "extra_hard",
+      "title": "String Rotation Check",
+      "description": "Read two strings S1 and S2 of the same length. Determine if S2 is a rotation of S1 (e.g., 'abcde' rotated is 'cdeab'). Output 'yes' if S2 is a rotation of S1, otherwise 'no'."
+    },
+    {
+      "id": "X11",
+      "difficulty": "extra_hard",
+      "title": "Count Inversions",
+      "description": "Read an integer N followed by N integers. Count the number of inversions: pairs (i,j) where i < j but arr[i] > arr[j]. Output that count."
+    },
+    {
+      "id": "X12",
+      "difficulty": "extra_hard",
+      "title": "Least Common Multiple",
+      "description": "Read two positive integers A and B. Compute and output their least common multiple (LCM)."
+    },
+    {
+      "id": "X13",
+      "difficulty": "extra_hard",
+      "title": "Valid Parentheses Types",
+      "description": "Read a string containing only '(', ')', '[', ']', '{', '}'. Check if all brackets are balanced and properly nested. Output 'yes' if valid, 'no' otherwise."
+    },
+    {
+      "id": "X14",
+      "difficulty": "extra_hard",
+      "title": "Next Greater Element",
+      "description": "Read an integer N followed by N integers. For each element, find the first element to its right that is greater than it. Output N integers where each is the next greater element, or -1 if none exists."
+    },
+    {
+      "id": "X15",
+      "difficulty": "extra_hard",
+      "title": "Spiral Matrix Traversal",
+      "description": "Read integers R and C for rows and columns, then R lines of C integers each representing a matrix. Output all elements in spiral order (clockwise from top-left) as space-separated integers."
+    },
+    {
+      "id": "X16",
+      "difficulty": "extra_hard",
+      "title": "Hamming Distance",
+      "description": "Read two non-negative integers A and B. Compute the Hamming distance between their binary representations (number of bit positions where they differ) and output that count."
+    },
+    {
+      "id": "X17",
+      "difficulty": "extra_hard",
+      "title": "Roman To Integer",
+      "description": "Read a valid Roman numeral string (I, V, X, L, C, D, M). Convert it to an integer and output the result. Input will be valid and in range 1-3999."
+    },
+    {
+      "id": "X18",
+      "difficulty": "extra_hard",
+      "title": "Integer To Roman",
+      "description": "Read an integer N in the range 1-3999. Convert it to a Roman numeral string using standard notation (I, V, X, L, C, D, M with subtractive pairs) and output the result."
+    },
+    {
+      "id": "X19",
+      "difficulty": "extra_hard",
+      "title": "Permutation Check",
+      "description": "Read an integer N followed by N integers. Determine if the sequence is a permutation of 1 to N (each number 1 to N appears exactly once). Output 'yes' if it is a valid permutation, 'no' otherwise."
+    },
+    {
+      "id": "X20",
+      "difficulty": "extra_hard",
+      "title": "Josephus Problem",
+      "description": "Read integers N and K. N people stand in a circle numbered 1 to N. Starting from person 1, count K people clockwise and eliminate that person. Repeat until one remains. Output the survivor's original number."
+    }
+  ]
+}

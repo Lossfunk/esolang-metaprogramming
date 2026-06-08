@@ -1,0 +1,13 @@
+# The benchmark harness itself uses only the Python standard library, with
+# one exception: the Shakespeare interpreter wraps the third-party
+# `shakespearelang` package. Brainfuck, Befunge-98, and Whitespace cells
+# need nothing beyond Python 3.10+; only Shakespeare cells need the package.
+#
+# Required for any Shakespeare cell:
+shakespearelang>=0.6.0
+
+# Provider SDKs are needed ONLY if you drive an agent programmatically.
+# Pick whichever provider you intend to evaluate (uncomment to install):
+# claude-agent-sdk>=0.1.0       # Claude Code via Python (Anthropic)
+# anthropic>=0.30.0             # raw Anthropic API client
+# openai>=1.50.0                # Codex / GPT-5.4 family

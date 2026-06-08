@@ -1,0 +1,1 @@
+../../../../../prompts/shakespeare/CLAUDE.md
