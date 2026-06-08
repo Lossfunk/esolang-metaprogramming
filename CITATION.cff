@@ -20,7 +20,7 @@ keywords:
   - EsoLang-Bench
 license: MIT
 preferred-citation:
-  type: conference-paper
+  type: article
   title: "Frontier Coding Agents Use Metaprogramming to Adapt to Unfamiliar Programming Languages"
   authors:
     - family-names: Sharma
@@ -29,6 +29,6 @@ preferred-citation:
       given-names: Sushrut
     - family-names: Chopra
       given-names: Paras
-  collection-title: "Advances in Neural Information Processing Systems (NeurIPS)"
   year: 2026
-  notes: "Lossfunk"
+  notes: "Preprint · Lossfunk"
+  url: "https://lossfunk.com"

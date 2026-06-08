@@ -25,7 +25,7 @@ echo "  $SUPP_ROOT"
 echo "====================================================================="
 
 echo
-echo "[A] Anonymity sanity"
+echo "[A] Path / secret sanity (no local paths or personal emails)"
 # Generic patterns that should NEVER appear in an anonymized supplementary
 # tree. Personal names / orgs / emails are NOT hard-coded here so that the
 # regex itself does not leak who is being filtered. To check author-specific
@@ -41,7 +41,7 @@ LEAK_RE="/Users/[A-Za-z0-9._-]+|/home/[a-z][a-z0-9._-]*|@(gmail|hotmail|outlook|
 if [ -n "${LEAK_RE_EXTRA:-}" ]; then
   LEAK_RE="$LEAK_RE|$LEAK_RE_EXTRA"
 fi
-content_hit=$(grep -rE "$LEAK_RE" "$SUPP_ROOT" 2>/dev/null | grep -v "rigorous_test\\.sh" | head -1 || true)
+content_hit=$(grep -rE --exclude-dir=.git "$LEAK_RE" "$SUPP_ROOT" 2>/dev/null | grep -v "rigorous_test\\.sh" | head -1 || true)
 if [ -n "$content_hit" ]; then
   echo "$content_hit"
   fail "personal paths or org names found in file content"
@@ -51,7 +51,7 @@ fi
 # Symlink targets are *not* read by grep -r; scan them explicitly.
 set +e
 symlink_hit=$(
-  find "$SUPP_ROOT" -type l -print0 2>/dev/null \
+  find "$SUPP_ROOT" -type l -not -path "*/.git/*" -print0 2>/dev/null \
     | while IFS= read -r -d '' l; do
         t=$(readlink "$l" || true)
         if echo "$t" | grep -qE "$LEAK_RE"; then
@@ -79,7 +79,7 @@ for must_exist in \
   "$SUPP_ROOT/README.md" \
   "$SUPP_ROOT/HOWTO_RUN.md" \
   "$SUPP_ROOT/LICENSE" \
-  "$SUPP_ROOT/ANONYMITY.md" ; do
+  "$SUPP_ROOT/CITATION.cff" ; do
   if [ -e "$must_exist" ]; then
     pass "exists: ${must_exist#$SUPP_ROOT/}"
   else
@@ -101,10 +101,6 @@ NUM_MAIN=$(find "$SUPP_ROOT/experiments/01_main_experiments" -mindepth 3 -maxdep
 
 NUM_ABL=$(find "$SUPP_ROOT/experiments/02_metaprogramming_ablation" -mindepth 3 -maxdepth 3 -type d | wc -l | tr -d ' ')
 [ "$NUM_ABL" = "8" ] && pass "02_metaprogramming_ablation has 8 cells" || fail "02_metaprogramming_ablation has $NUM_ABL cells (expected 8)"
-
-NUM_DIST=$(find "$SUPP_ROOT/experiments/03_distillation/text" "$SUPP_ROOT/experiments/03_distillation/library" \
-  -mindepth 2 -maxdepth 2 -type d 2>/dev/null | wc -l | tr -d ' ')
-[ "$NUM_DIST" = "12" ] && pass "03_distillation has 12 cells" || fail "03_distillation has $NUM_DIST cells (expected 12)"
 
 NUM_CROSS=$(find "$SUPP_ROOT/experiments/04_cross_language_transfer/javascript" \
                 "$SUPP_ROOT/experiments/04_cross_language_transfer/rust" \

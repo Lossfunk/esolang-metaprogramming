@@ -25,8 +25,8 @@ It contains:
   page to grade end-to-end — see "Dataset");
 - the per-language **agent prompts** (`CLAUDE.md` for Claude Code, `AGENTS.md`
   for Codex / OpenCode — identical content);
-- the four **experiment configurations**: main grid, metaprogramming ablation,
-  distillation, and cross-language transfer.
+- the **experiment configurations**: main grid, metaprogramming ablation, and
+  cross-language transfer.
 
 ---
 
@@ -106,7 +106,6 @@ esolang-metaprogramming/
   experiments/
     01_main_experiments/         6 agents x 4 languages   (Table 1, Figure 3)
     02_metaprogramming_ablation/ meta-allowed vs forbidden (Section 3.2, Figure 4)
-    03_distillation/             text vs library transfer  (Section 3.3, Table 5)
     04_cross_language_transfer/  Python / JS / Rust gens   (Table 4)
   scripts/
     setup_all.sh                 wire up every experiment in one shot
@@ -133,10 +132,8 @@ esolang-metaprogramming/
 | Table 1, Figure 3 (capability cliff) | `experiments/01_main_experiments/` |
 | Figure 4 (meta-allowed vs forbidden) | `experiments/02_metaprogramming_ablation/` |
 | Table 4 (cross-language) | `experiments/04_cross_language_transfer/` |
-| Table 5 (distillation) | `experiments/03_distillation/` |
 | Appendix B (raw counts, CIs) | per-cell `export.json` under `01_main_experiments/` |
 | Appendix B.8 (cross-harness) | `experiments/01_main_experiments/{codex,opencode}/` |
-| Appendix E (distillation prompts + ref lib) | `experiments/03_distillation/{prompts,reference_lib}/` |
 
 ## Dataset (third-party)
 
@@ -163,22 +160,20 @@ test exercises.
 ## License and authorship
 
 The harness, interpreters, and per-language prompts are released under the MIT
-License (see `LICENSE`). The strategy library in
-`experiments/03_distillation/reference_lib/` was authored by Claude Opus 4.6 and
-GPT-5.4 xhigh during their headline runs; we redistribute it under MIT for
-reproducibility. The EsoLang-Bench dataset is a separately released artifact;
-its license is set by the dataset maintainers on the HuggingFace page above.
+License (see `LICENSE`). The EsoLang-Bench dataset is a separately released
+artifact; its license is set by the dataset maintainers on the HuggingFace page
+above.
 
 ## Citation
 
 See **[CITATION.cff](CITATION.cff)**, or:
 
 ```bibtex
-@inproceedings{sharma2026metaprogramming,
-  title     = {Frontier Coding Agents Use Metaprogramming to Adapt to Unfamiliar Programming Languages},
-  author    = {Sharma, Aman and Thorat, Sushrut and Chopra, Paras},
-  booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
-  year      = {2026},
-  note      = {Lossfunk}
+@misc{sharma2026metaprogramming,
+  title  = {Frontier Coding Agents Use Metaprogramming to Adapt to Unfamiliar Programming Languages},
+  author = {Sharma, Aman and Thorat, Sushrut and Chopra, Paras},
+  year   = {2026},
+  note   = {Lossfunk},
+  url    = {https://lossfunk.com}
 }
 ```

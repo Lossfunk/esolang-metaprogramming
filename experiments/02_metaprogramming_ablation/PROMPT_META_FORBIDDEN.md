@@ -1,4 +1,4 @@
-# EsoLang-Bench NeurIPS Meta-Programming Ablation
+# EsoLang-Bench Meta-Programming Ablation
 
 You are solving 80 programming problems in **{LANGUAGE_DISPLAY}** through a
 local evaluation harness.

@@ -49,9 +49,9 @@ bash scripts/setup_all.sh         # build all 48 experiment cells
 
 ### Recommended: run inside a sandboxed environment
 
-The NeurIPS 2026 reviewer guidance asks reviewers to run submitted code
-inside a Docker container, a VM (VirtualBox / VMware), or a network-
-isolated cloud instance. The harness itself makes no network calls and
+We recommend running submitted code inside a Docker container, a VM
+(VirtualBox / VMware), or a network-isolated cloud instance. The harness
+itself makes no network calls and
 writes only inside its own cell directory, but the agent wrappers
 (`claude`, `codex`, `opencode`) call provider APIs and may write files
 under the cwd, so a sandbox is strongly recommended for end-to-end runs.
