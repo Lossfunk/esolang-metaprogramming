@@ -9,8 +9,8 @@ authors:
   - family-names: Chopra
     given-names: Paras
 year: 2026
-url: "https://lossfunk.com"
-repository-code: "https://github.com/lossfunk/esolang-metaprogramming"
+url: "https://arxiv.org/abs/2606.10933"
+repository-code: "https://github.com/Lossfunk/esolang-metaprogramming"
 keywords:
   - coding agents
   - esoteric programming languages
@@ -30,5 +30,5 @@ preferred-citation:
     - family-names: Chopra
       given-names: Paras
   year: 2026
-  notes: "Preprint · Lossfunk"
-  url: "https://lossfunk.com"
+  notes: "Preprint · arXiv:2606.10933 · Lossfunk"
+  url: "https://arxiv.org/abs/2606.10933"

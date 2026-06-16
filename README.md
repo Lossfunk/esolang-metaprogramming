@@ -4,8 +4,8 @@ Official code release for the paper
 **Frontier Coding Agents Use Metaprogramming to Adapt to Unfamiliar Programming Languages**
 Aman Sharma, Sushrut Thorat, Paras Chopra · **Lossfunk** · 2026.
 
-- 📄 Paper / preprint: see the project page
-- 🌐 Project page: **https://lossfunk.com** (metaprogramming paper)
+- 📄 Paper (arXiv): **https://arxiv.org/abs/2606.10933**
+- 🌐 Project page / website: **https://esolang-metaprogramming.vercel.app**
 - 🤗 Benchmark dataset (EsoLang-Bench): **https://huggingface.co/datasets/Lossfunk/Esolang-Bench**
 
 This repository lets you **reproduce every result in the paper** and, more
@@ -169,11 +169,13 @@ above.
 See **[CITATION.cff](CITATION.cff)**, or:
 
 ```bibtex
-@misc{sharma2026metaprogramming,
-  title  = {Frontier Coding Agents Use Metaprogramming to Adapt to Unfamiliar Programming Languages},
-  author = {Sharma, Aman and Thorat, Sushrut and Chopra, Paras},
-  year   = {2026},
-  note   = {Lossfunk},
-  url    = {https://lossfunk.com}
+@article{sharma2026metaprogramming,
+  title         = {Frontier Coding Agents Use Metaprogramming to Adapt to Unfamiliar Programming Languages},
+  author        = {Sharma, Aman and Thorat, Sushrut and Chopra, Paras},
+  year          = {2026},
+  eprint        = {2606.10933},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.AI},
+  url           = {https://arxiv.org/abs/2606.10933}
 }
 ```
