@@ -1,0 +1,1 @@
+../../../../prompts/whitespace/AGENTS.md

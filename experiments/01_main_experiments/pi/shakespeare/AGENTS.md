@@ -1,0 +1,1 @@
+../../../../prompts/shakespeare/AGENTS.md

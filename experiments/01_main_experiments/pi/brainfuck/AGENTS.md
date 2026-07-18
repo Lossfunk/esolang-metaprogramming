@@ -1,0 +1,1 @@
+../../../../prompts/brainfuck/AGENTS.md
