@@ -97,9 +97,11 @@ fi
 # ---------------------------------------------------------------------------
 # 4. smoke: live pi run artifact
 # ---------------------------------------------------------------------------
-SMOKE_EXPORT="$PI_DIR/artifacts/smoke_export.json"
-if [[ ! -f "$SMOKE_EXPORT" ]]; then
-  fail "smoke: $SMOKE_EXPORT missing -- run the live pi smoke test first"
+# run_cell.sh copies the cell's export.json to pi/artifacts/<language>_export.json
+# after every run (any language qualifies as the smoke proof).
+SMOKE_EXPORT="$(ls "$PI_DIR"/artifacts/*_export.json 2>/dev/null | head -1)"
+if [[ -z "$SMOKE_EXPORT" || ! -f "$SMOKE_EXPORT" ]]; then
+  fail "smoke: no pi/artifacts/<language>_export.json found -- run the live pi smoke test first (pi/run_cell.sh ...)"
 else
   "$PY" - "$SMOKE_EXPORT" <<'PYEOF'
 import json, sys
@@ -112,7 +114,7 @@ assert submissions >= 1, f"expected >=1 recorded submission, got {submissions}"
 print(f"attempted={len(attempted)} submissions={submissions}")
 PYEOF
   if [[ $? -eq 0 ]]; then
-    pass "smoke: export shows >=2 attempted problems and >=1 real submission"
+    pass "smoke: $(basename "$SMOKE_EXPORT") shows >=2 attempted problems and >=1 real submission"
   else
     fail "smoke: $SMOKE_EXPORT did not meet the >=2 attempted / >=1 submission bar"
   fi

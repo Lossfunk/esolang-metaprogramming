@@ -154,4 +154,7 @@ for ((i = 1; i <= MAX_TURNS; i++)); do
 done
 
 python3 harness.py export
-echo "[run_cell] done. export.json written in $CELL_DIR"
+ARTIFACTS_DIR="$PI_DIR/artifacts"
+mkdir -p "$ARTIFACTS_DIR"
+cp "$CELL_DIR/export.json" "$ARTIFACTS_DIR/${LANGUAGE}_export.json"
+echo "[run_cell] done. export.json written in $CELL_DIR (and copied to $ARTIFACTS_DIR/${LANGUAGE}_export.json)"
